@@ -1,0 +1,61 @@
+{
+  "name": "books",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "./dist/main.js",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "pkgroll --src ./src/ --dist ./dist/ --minify",
+    "watch": "tsx watch --env-file=.env ./src/main.ts",
+    "preview": "pnpm build && node --env-file=.env dist/main.js",
+    "lint": "eslint --max-warnings 0 .",
+    "format": "prettier --write .",
+    "test": "echo test",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "http-errors-enhanced": "^2.0.8",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "6.37.3",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-serve-static-core": "^4.19.5",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.12",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^9.1.2",
+    "lint-staged": "^15.2.7",
+    "pkgroll": "^2.4.1",
+    "prettier": "^3.3.3",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.4.0"
+}
