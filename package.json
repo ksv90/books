@@ -10,7 +10,8 @@
   "scripts": {
     "build": "pkgroll --src ./src/ --dist ./dist/ --minify",
     "watch": "tsx watch --env-file=.env ./src/main.ts",
-    "preview": "pnpm build && node --env-file=.env dist/main.js",
+    "start": "node --env-file=.env dist/main.js",
+    "preview": "pnpm build && pnpm start",
     "lint": "eslint --max-warnings 0 .",
     "format": "prettier --write .",
     "test": "echo test",
