@@ -9,4 +9,6 @@ COPY . .
 
 RUN pnpm install --frozen-lockfile
 
-CMD [ "pnpm", "preview" ]
+RUN pnpm build
+
+CMD [ "pnpm", "start" ]
